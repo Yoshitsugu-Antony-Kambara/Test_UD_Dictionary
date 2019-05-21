@@ -30,10 +30,13 @@ class ViewController: UIViewController {
         userDefaults.set(dic, forKey: "ratio")
     }
     
-    //buttonGetをタップするとラベルにデータを表示したい
+    
     @IBAction func buttonGet(_ sender: Any) {
         var getData = userDefaults.dictionary(forKey: "ratio")
         //label.text = dic["2019/05/20"]
+        
+        let hoge = getData?["2019/05/20"]
+        label.text = hoge as? String
     }
 }
 
